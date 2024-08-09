@@ -44,6 +44,12 @@ app.use(
   })
 );
 
+// app.use(
+//   cors({
+//     origin: "https://mk-codezone.vercel.app", // or '*' to allow all origins
+//   })
+// );
+
 app.use(
   fileUpload({
     useTempFiles: true,
@@ -69,5 +75,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`App is running at ${PORT}`);
+  console.log(`App is running at server ${PORT}`);
 });
