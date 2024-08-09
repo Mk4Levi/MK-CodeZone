@@ -5,7 +5,7 @@ const userRoutes = require("./routes/User");
 const profileRoutes = require("./routes/Profile");
 const paymentRoutes = require("./routes/Payments");
 const courseRoutes = require("./routes/Course");
-const contactRoutes = require("./routes/Contact");
+// const contactRoutes = require("./routes/Contact");
 
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
@@ -23,7 +23,7 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 const allowedOrigins = [
-  "https://codeup-three.vercel.app",
+  "https://mk-codezone.vercel.app",
   "http://localhost:3000",
 ];
 
@@ -43,6 +43,12 @@ app.use(
     credentials: true,
   })
 );
+
+// app.use(
+//   cors({
+//     origin: "https://mk-codezone.vercel.app", // or '*' to allow all origins
+//   })
+// );
 
 app.use(
   fileUpload({
@@ -69,5 +75,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`App is running at ${PORT}`);
+  console.log(`App is running at server ${PORT}`);
 });
