@@ -23,7 +23,7 @@ database.connect();
 app.use(express.json());
 app.use(cookieParser());
 const allowedOrigins = [
-  "https://codeup-three.vercel.app",
+  "https://mk-codezone.vercel.app",
   "http://localhost:3000",
 ];
 
