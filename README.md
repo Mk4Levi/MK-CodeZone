@@ -4,7 +4,7 @@ MK-CodeZone is a full-stack EdTech platform for programers built using the MERN 
 
 ### Project Link:
 
-[Visit web-app](https://mk-codezone.vercel.app/)
+[Visit Project's Live Web-App](https://mk-codezone.vercel.app/)
 
 ## Technologies Used
 
@@ -44,13 +44,14 @@ To get a local copy up and running follow these simple steps.
 
    ```sh
    Frontend- npm install
-   Backend- 1. cd ./server 2. npm install
+   Backend- 1. cd server 2. npm install
 
    ```
 
 3. Start the development server
    ```sh
-   npm run dev
+   Frontend- npm run start
+   Backend- 1. cd server  2. npm run dev
    ```
 
 ### Contact
