@@ -6,6 +6,13 @@ MK-CodeZone is a full-stack EdTech platform for programers built using the MERN 
 
 [Visit Project's Live Web-App](https://mk-codezone.vercel.app/)
 
+## Project's Screenshots =>
+
+![image](./src/assets/Images/ss1.png)
+![image](./src/assets/Images/ss2.png)
+![image](./src/assets/Images/ss3.png)
+![image](./src/assets/Images/ss4.png)
+
 ## Technologies Used
 
 - **MongoDB**: Database
@@ -36,7 +43,7 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/mk4levi/mk-coderzone.git
+   git clone https://github.com/mk4levi/mk-codezone.git
 
    ```
 
