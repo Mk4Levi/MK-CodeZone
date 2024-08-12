@@ -153,7 +153,7 @@ const Home = () => {
 
             <div className="flex flex-col gap-10 w-[40%] items-start">
               <div className="text-[16px]">
-                The modern Codeup is the dictates its own terms. Today, to be a
+                The modern MK-CodeZone dictates its own terms. Today, to be a
                 competitive specialist requires more than professional skills.
               </div>
               <CTAButton active={true} linkto={"/signup"}>

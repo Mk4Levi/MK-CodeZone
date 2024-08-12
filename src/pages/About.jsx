@@ -1,8 +1,8 @@
 import React from "react";
-import FoundingStory from "../assets/Images/FoundingStory.png";
-import BannerImage1 from "../assets/Images/aboutus1.webp";
-import BannerImage2 from "../assets/Images/aboutus2.webp";
-import BannerImage3 from "../assets/Images/aboutus3.webp";
+import FoundingStory from "../assets/Images/FoundingStory.jpg";
+import BannerImage1 from "../assets/Images/aboutus1.jpg";
+import BannerImage2 from "../assets/Images/aboutus2.jpg";
+import BannerImage3 from "../assets/Images/aboutus3.avif";
 import Footer from "../components/common/Footer";
 import ReviewSlider from "../components/common/ReviewSlider";
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection";
@@ -106,7 +106,7 @@ const About = () => {
         </div>
       </section>
 
-      <StatsComponenet />
+      {/* <StatsComponenet /> */}
       <section className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white">
         <LearningGrid />
         <ContactFormSection />

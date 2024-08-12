@@ -22,25 +22,25 @@ const LearningGridArray = [
     order: 2,
     heading: "Our Learning Methods",
     description:
-      "CodeUp partners with more than 275+ leading universities and companies to bring",
+      "MK-CodeZone partners with more than 275+ leading universities and companies to bring",
   },
   {
     order: 3,
     heading: "Certification",
     description:
-      "CodeUp partners with more than 275+ leading universities and companies to bring",
+      "MK-CodeZone partners with more than 275+ leading universities and companies to bring",
   },
   {
     order: 4,
     heading: `Rating "Auto-grading"`,
     description:
-      "CodeUp partners with more than 275+ leading universities and companies to bring",
+      "MK-CodeZone partners with more than 275+ leading universities and companies to bring",
   },
   {
     order: 5,
     heading: "Ready to Work",
     description:
-      "CodeUp partners with more than 275+ leading universities and companies to bring",
+      "MK-CodeZone partners with more than 275+ leading universities and companies to bring",
   },
 ];
 
