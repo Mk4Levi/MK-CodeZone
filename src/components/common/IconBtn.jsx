@@ -25,5 +25,5 @@ export default function IconBtn({
         text
       )}
     </button>
-  )
+  );
 }
