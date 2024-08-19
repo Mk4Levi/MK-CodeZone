@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Manthan Kumar",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
