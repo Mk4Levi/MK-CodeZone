@@ -46,12 +46,6 @@ app.use(
   })
 );
 
-// app.use(
-//   cors({
-//     origin: "https://mk-codezone.vercel.app", // or '*' to allow all origins
-//   })
-// );
-
 app.use(
   fileUpload({
     useTempFiles: true,

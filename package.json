@@ -35,9 +35,6 @@
     "url": "https://github.com/mk4levi/mk-codezone"
   },
   "author": "Manthan Kumar",
-  "bugs": {
-    "url": ""
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
