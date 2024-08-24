@@ -1,6 +1,7 @@
 import React from "react";
 import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Images
 import Logo from "../../assets/Logo/Logo.png";
@@ -21,6 +22,15 @@ const Resources = [
 ];
 const Plans = ["Paid memberships", "For students", "Business solutions"];
 const Community = ["Forums", "Chapters", "Events"];
+
+// For Refreshing Page
+const handleClick = () => {
+  // Navigate to the route
+  window.location.href = "/";
+
+  // Trigger a page reload
+  window.location.reload();
+};
 
 const Footer = () => {
   let date = new Date();
@@ -43,7 +53,10 @@ const Footer = () => {
                       key={i}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.toLowerCase()}>{ele}</Link>
+                      {/* <Link to={ele.toLowerCase()}>{ele}</Link> */}
+                      <Link to="/" onClick={handleClick}>
+                        {ele}
+                      </Link>
                     </div>
                   );
                 })}
@@ -69,7 +82,8 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      {/* <Link to={ele.split(" ").join("-").toLowerCase()}> */}
+                      <Link to="/" onClick={handleClick}>
                         {ele}
                       </Link>
                     </div>
@@ -81,7 +95,9 @@ const Footer = () => {
                 Support
               </h1>
               <div className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200 mt-2">
-                <Link to={"/help-center"}>Help Center</Link>
+                <Link to="/" onClick={handleClick}>
+                  Help Center
+                </Link>
               </div>
             </div>
 
@@ -97,7 +113,8 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      {/* <Link to={ele.split(" ").join("-").toLowerCase()}> */}
+                      <Link to={"/"} onClick={handleClick}>
                         {ele}
                       </Link>
                     </div>
@@ -115,7 +132,8 @@ const Footer = () => {
                       key={index}
                       className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                     >
-                      <Link to={ele.split(" ").join("-").toLowerCase()}>
+                      {/* <Link to={ele.split(" ").join("-").toLowerCase()}> */}
+                      <Link to={"/"} onClick={handleClick}>
                         {ele}
                       </Link>
                     </div>
@@ -140,7 +158,10 @@ const Footer = () => {
                           key={index}
                           className="text-[14px] cursor-pointer hover:text-richblack-50 transition-all duration-200"
                         >
-                          <Link to={link.link}>{link.title}</Link>
+                          {/* <Link to={link.link}>{link.title}</Link> */}
+                          <Link to={"/"} onClick={handleClick}>
+                            {link.title}
+                          </Link>
                         </div>
                       );
                     })}
@@ -166,7 +187,8 @@ const Footer = () => {
                       : "border-r border-richblack-700 cursor-pointer hover:text-richblack-50 transition-all duration-200"
                   } px-3 `}
                 >
-                  <Link to={ele.split(" ").join("-").toLocaleLowerCase()}>
+                  {/* <Link to={ele.split(" ").join("-").toLocaleLowerCase()}> */}
+                  <Link to={"/"} onClick={handleClick}>
                     {ele}
                   </Link>
                 </div>
