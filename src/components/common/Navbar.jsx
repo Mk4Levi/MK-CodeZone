@@ -8,7 +8,7 @@ import ProfileDropDown from "../core/Auth/ProfileDropDown";
 import { apiConnector } from "../../services/apiconnector";
 import { categories } from "../../services/apis";
 import logo from "../../assets/Logo/Logo.png";
-import mkLogo from "../../assets/Logo/MK-Logo.png";
+import mkLogo from "../../assets/Logo/MK-Logoo.png";
 import "../css/Navbar.css";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { ACCOUNT_TYPE } from "../../utils/constants";
