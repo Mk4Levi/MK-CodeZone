@@ -5,10 +5,10 @@ import CTAButton from "../../core/HomePage/CTAButton";
 const LearningGridArray = [
   {
     order: -1,
-    heading: "World-Class Learning for",
+    heading: "Global Excellence in Education for",
     highlightText: "Anyone, Anywhere",
     description:
-      "MK-CodeZone partners with more than 275+ leading universities and companies to bring flexible, affordable, job-relevant online learning to individuals and organizations worldwide.",
+      "MK-CodeZone collaborates with over 275 premier universities and industry leaders to deliver flexible, affordable, and industry-relevant online learning solutions. Our commitment is to provide world-class education accessible to individuals and organizations around the globe.",
     BtnText: "Learn More",
     BtnLink: "/",
   },
