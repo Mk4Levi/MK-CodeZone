@@ -1,20 +1,20 @@
-import { useState } from "react"
-import { toast } from "react-hot-toast"
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { useDispatch } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+import { toast } from "react-hot-toast";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-import { sendOtp } from "../../../services/operations/authAPI"
-import { setSignupData } from "../../../slices/authSlice"
-import { ACCOUNT_TYPE } from "../../../utils/constants"
-import Tab from "../../common/Tab"
+import { sendOtp } from "../../../services/operations/authAPI";
+import { setSignupData } from "../../../slices/authSlice";
+import { ACCOUNT_TYPE } from "../../../utils/constants";
+import Tab from "../../common/Tab";
 
 function SignupForm() {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // student or instructor
-  const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT)
+  const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -22,39 +22,39 @@ function SignupForm() {
     email: "",
     password: "",
     confirmPassword: "",
-  })
+  });
 
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-  const { firstName, lastName, email, password, confirmPassword } = formData
+  const { firstName, lastName, email, password, confirmPassword } = formData;
 
   // Handle input fields, when some value changes
   const handleOnChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   // Handle Form Submission
   const handleOnSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (password !== confirmPassword) {
-      toast.error("Passwords Do Not Match")
-      return
+      toast.error("Passwords Do Not Match");
+      return;
     }
     const signupData = {
       ...formData,
       accountType,
-    }
+    };
 
     // Setting signup data to state
     // To be used after otp verification
-    dispatch(setSignupData(signupData))
+    dispatch(setSignupData(signupData));
     // Send OTP to user for verification
-    dispatch(sendOtp(formData.email, navigate))
+    dispatch(sendOtp(formData.email, navigate));
 
     // Reset
     setFormData({
@@ -63,9 +63,9 @@ function SignupForm() {
       email: "",
       password: "",
       confirmPassword: "",
-    })
-    setAccountType(ACCOUNT_TYPE.STUDENT)
-  }
+    });
+    setAccountType(ACCOUNT_TYPE.STUDENT);
+  };
 
   // data to pass to Tab component
   const tabData = [
@@ -79,17 +79,17 @@ function SignupForm() {
       tabName: "Instructor",
       type: ACCOUNT_TYPE.INSTRUCTOR,
     },
-  ]
+  ];
 
   return (
-    <div>
+    <div className="w-full max-w-md mx-auto px-4 sm:px-6 lg:px-8">
       {/* Tab */}
       <Tab tabData={tabData} field={accountType} setField={setAccountType} />
       {/* Form */}
-      <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-4">
-        <div className="flex gap-x-4">
-          <label>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+      <form onSubmit={handleOnSubmit} className="flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-4 lg:flex-row lg:gap-x-4">
+          <label className="flex flex-col gap-y-2 w-full lg:w-1/2">
+            <p className="text-sm leading-5 text-richblack-5">
               First Name <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -99,14 +99,11 @@ function SignupForm() {
               value={firstName}
               onChange={handleOnChange}
               placeholder="Enter first name"
-              style={{
-                boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-              }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+              className="w-full rounded-md bg-richblack-800 p-3 text-richblack-5 placeholder:text-richblack-400"
             />
           </label>
-          <label>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+          <label className="flex flex-col gap-y-2 w-full lg:w-1/2">
+            <p className="text-sm leading-5 text-richblack-5">
               Last Name <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -116,33 +113,27 @@ function SignupForm() {
               value={lastName}
               onChange={handleOnChange}
               placeholder="Enter last name"
-              style={{
-                boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-              }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+              className="w-full rounded-md bg-richblack-800 p-3 text-richblack-5 placeholder:text-richblack-400"
             />
           </label>
         </div>
-        <label className="w-full">
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <label className="flex flex-col gap-y-2 w-full">
+          <p className="text-sm leading-5 text-richblack-5">
             Email Address <sup className="text-pink-200">*</sup>
           </p>
           <input
             required
-            type="text"
+            type="email"
             name="email"
             value={email}
             onChange={handleOnChange}
             placeholder="Enter email address"
-            style={{
-              boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-            }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+            className="w-full rounded-md bg-richblack-800 p-3 text-richblack-5 placeholder:text-richblack-400"
           />
         </label>
-        <div className="flex gap-x-4">
-          <label className="relative">
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <div className="flex flex-col gap-y-4 lg:flex-row lg:gap-x-4">
+          <label className="relative flex flex-col gap-y-2 w-full lg:w-1/2">
+            <p className="text-sm leading-5 text-richblack-5">
               Create Password <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -152,14 +143,11 @@ function SignupForm() {
               value={password}
               onChange={handleOnChange}
               placeholder="Enter Password"
-              style={{
-                boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-              }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-10 text-richblack-5"
+              className="w-full rounded-md bg-richblack-800 p-3 pr-12 text-richblack-5 placeholder:text-richblack-400"
             />
             <span
               onClick={() => setShowPassword((prev) => !prev)}
-              className="absolute right-3 top-[38px] z-[10] cursor-pointer"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
             >
               {showPassword ? (
                 <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
@@ -168,8 +156,8 @@ function SignupForm() {
               )}
             </span>
           </label>
-          <label className="relative">
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+          <label className="relative flex flex-col gap-y-2 w-full lg:w-1/2">
+            <p className="text-sm leading-5 text-richblack-5">
               Confirm Password <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -179,14 +167,11 @@ function SignupForm() {
               value={confirmPassword}
               onChange={handleOnChange}
               placeholder="Confirm Password"
-              style={{
-                boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
-              }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-10 text-richblack-5"
+              className="w-full rounded-md bg-richblack-800 p-3 pr-12 text-richblack-5 placeholder:text-richblack-400"
             />
             <span
               onClick={() => setShowConfirmPassword((prev) => !prev)}
-              className="absolute right-3 top-[38px] z-[10] cursor-pointer"
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
             >
               {showConfirmPassword ? (
                 <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
@@ -198,13 +183,13 @@ function SignupForm() {
         </div>
         <button
           type="submit"
-          className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+          className="mt-6 rounded-md bg-yellow-50 py-2 px-4 font-medium text-richblack-900"
         >
           Create Account
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default SignupForm
+export default SignupForm;
