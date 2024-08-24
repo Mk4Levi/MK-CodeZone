@@ -1,0 +1,16 @@
+@media (max-width: 750px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .appLogo {
+    width: 120px;
+    height: 40px;
+  }
+
+  .login-signup-btns {
+    font-size: 10px;
+  }
+}

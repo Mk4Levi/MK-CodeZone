@@ -17,13 +17,13 @@ const About = () => {
       <section className="bg-richblack-700">
         <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-center text-white">
           <header className="mx-auto py-20 text-4xl font-semibold lg:w-[70%]">
-            Driving Innovation in Online Education for a
-            <HighlightText text={"Brighter Future"} />
+            Leading the Future of Online Education with
+            <HighlightText text={"Innovative Solutions"} />
             <p className="mx-auto mt-3 text-center text-base font-medium text-richblack-300 lg:w-[95%]">
-              MK-CodeZone is at the forefront of driving innovation in online
-              education. We're passionate about creating a brighter future by
-              offering cutting-edge courses, leveraging emerging technologies,
-              and nurturing a vibrant learning community.
+              MK-CodeZone Leads the Way in Online Education Innovation. We are
+              committed to shaping the future of learning through advanced
+              courses, state-of-the-art technology, and a dynamic educational
+              community.
             </p>
           </header>
           <div className="sm:h-[70px] lg:h-[150px]"></div>
@@ -47,23 +47,23 @@ const About = () => {
           <div className="flex flex-col items-center gap-10 lg:flex-row justify-between">
             <div className="my-24 flex lg:w-[50%] flex-col gap-10">
               <h1 className="bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text text-4xl font-semibold text-transparent lg:w-[70%] ">
-                Our Founding Story
+                Our Origin
               </h1>
               <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                Our e-learning platform was born out of a shared vision and
-                passion for transforming education. It all began with a group of
-                educators, technologists, and lifelong learners who recognized
-                the need for accessible, flexible, and high-quality learning
-                opportunities in a rapidly evolving digital world.
+                MK-CodeZone was established with a clear mission to
+                revolutionize education through innovation. Founded by a team of
+                forward-thinking educators, technology experts, and passionate
+                learners, our platform emerged from a shared commitment to
+                enhancing access to high-quality education in an increasingly
+                digital world.
               </p>
               <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                As experienced educators ourselves, we witnessed firsthand the
-                limitations and challenges of traditional education systems. We
-                believed that education should not be confined to the walls of a
-                classroom or restricted by geographical boundaries. We
-                envisioned a platform that could bridge these gaps and empower
-                individuals from all walks of life to unlock their full
-                potential.
+                Driven by firsthand experience with the constraints of
+                traditional education, we set out to create a solution that
+                transcends physical and geographical limitations. Our goal is to
+                provide a flexible, accessible, and impactful learning
+                experience that empowers individuals globally to achieve their
+                full potential.
               </p>
             </div>
 
@@ -81,12 +81,11 @@ const About = () => {
                 Our Vision
               </h1>
               <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                With this vision in mind, we set out on a journey to create an
-                e-learning platform that would revolutionize the way people
-                learn. Our team of dedicated experts worked tirelessly to
-                develop a robust and intuitive platform that combines
-                cutting-edge technology with engaging content, fostering a
-                dynamic and interactive learning experience.
+                We aim to redefine the landscape of education with a pioneering
+                e-learning platform. Our dedicated team has meticulously crafted
+                a sophisticated, user-friendly environment that integrates
+                cutting-edge technology with compelling content, creating a
+                transformative and interactive learning experience.
               </p>
             </div>
             <div className="my-24 flex lg:w-[40%] flex-col gap-10">
@@ -94,12 +93,12 @@ const About = () => {
                 Our Mission
               </h1>
               <p className="text-base font-medium text-richblack-300 lg:w-[95%]">
-                Our mission goes beyond just delivering courses online. We
-                wanted to create a vibrant community of learners, where
-                individuals can connect, collaborate, and learn from one
-                another. We believe that knowledge thrives in an environment of
-                sharing and dialogue, and we foster this spirit of collaboration
-                through forums, live sessions, and networking opportunities.
+                Our mission extends beyond simply providing online courses. We
+                strive to build a thriving learning community where individuals
+                can engage, collaborate, and benefit from collective knowledge.
+                Through forums, live sessions, and networking opportunities, we
+                cultivate an environment that encourages sharing and dialogue,
+                enhancing the overall educational journey.
               </p>
             </div>
           </div>
@@ -115,7 +114,7 @@ const About = () => {
       <div className="w-11/12 mx-auto max-w-maxContent flex-col items-center justify-between gap-8 first-letter bg-richblack-900 text-white">
         {/* Reviws from Other Learner */}
         <h1 className="text-center text-4xl font-semibold mt-8">
-          Reviews from other learners
+          Learner Feedback
         </h1>
         <ReviewSlider />
       </div>

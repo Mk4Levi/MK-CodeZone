@@ -6,20 +6,20 @@ import * as Icon2 from "react-icons/io5";
 const contactDetails = [
   {
     icon: "HiChatBubbleLeftRight",
-    heading: "Chat on us",
+    heading: "Mail Us",
     description: "Our friendly team is here to help.",
     details: "mksoul1811@gmail.com",
   },
   {
     icon: "BiWorld",
-    heading: "Visit us",
-    description: "Come and say hello at our office.",
-    details: "Tech Park, Delhi",
+    heading: "Our Address",
+    description: "Come and say Hello",
+    details: "Bangalore, India",
   },
   {
     icon: "IoCall",
     heading: "Call us",
-    description: "Mon - Fri From 8am to 5pm",
+    description: "Mon - Fri from 8am to 5pm",
     details: "+91 1234 567 89",
   },
 ];
