@@ -1,15 +1,11 @@
 import React from "react";
 import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-
-// Images
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import Logo from "../../assets/Logo/Logo.png";
 
-// Icons
-import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
-
-const BottomFooter = ["Privacy Policy", "Cookie Policy", "Terms"];
+const BottomFooter = ["Privacy Policy", "Terms of Use"];
 const Resources = [
   "Articles",
   "Blog",
@@ -62,10 +58,34 @@ const Footer = () => {
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <FaFacebook />
-                <FaGoogle />
-                <FaTwitter />
-                <FaYoutube />
+                <Link
+                  to={"https://www.youtube.com/"}
+                  target="blank"
+                  title="Github"
+                >
+                  <FaGithub />
+                </Link>
+                <Link
+                  to={"mailto:mksoul1811@gmail.com"}
+                  target="blank"
+                  title="Gmail"
+                >
+                  <SiGmail />
+                </Link>
+                <Link
+                  to={"https://www.twitter.com/mk4coder"}
+                  target="blank"
+                  title="Twitter"
+                >
+                  <FaTwitter />
+                </Link>
+                <Link
+                  to={"https://www.linkedin.com/in/mk4coder"}
+                  target="blank"
+                  title="LinkedIn"
+                >
+                  <FaLinkedin />
+                </Link>
               </div>
               <div></div>
             </div>
@@ -200,13 +220,15 @@ const Footer = () => {
             built by <b>Manthan Kumar || </b>
             <b>Copyright © {year} || </b>
             <strong className="purple">
-              <Link
-                to="https://manthan-mk-portfolio.vercel.app/"
-                className="footer-link"
-                target="_blank"
-              >
-                Manthan-MK
-              </Link>
+              {
+                <Link
+                  to="https://manthan-mk-portfolio.vercel.app/"
+                  className="footer-link"
+                  target="_blank"
+                >
+                  Manthan-MK
+                </Link>
+              }
             </strong>
           </div>
         </div>

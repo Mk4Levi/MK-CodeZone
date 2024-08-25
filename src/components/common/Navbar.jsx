@@ -78,7 +78,7 @@ const Navbar = () => {
                   <div
                     className={`group relative flex cursor-pointer items-center gap-1 ${
                       matchRoute("/catalog/:catalogName")
-                        ? "text-yellow-25"
+                        ? "text-caribbeangreen-25"
                         : "text-richblack-25"
                     }`}
                   >
@@ -115,7 +115,7 @@ const Navbar = () => {
                     <p
                       className={`${
                         matchRoute(link.path)
-                          ? "text-yellow-25"
+                          ? "text-caribbeangreen-25"
                           : "text-richblack-25"
                       }`}
                     >
