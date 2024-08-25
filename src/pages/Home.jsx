@@ -30,25 +30,26 @@ const Home = () => {
 
         {/* Main Heading */}
         <div className="text-center text-3xl sm:text-4xl lg:text-5xl font-semibold mt-6 sm:mt-8 lg:mt-10">
-          Empower Your Future with
+          Unlock Your Potential: Master
           <HighlightText text={"Coding Skills"} />
+          &nbsp;for a Brighter Future
         </div>
 
         {/* Description */}
         <div className="mt-4 w-full max-w-3xl text-center text-base sm:text-lg font-bold text-richblack-300">
-          With our online coding courses, you can learn at your own pace, from
-          anywhere in the world, and get access to a wealth of resources,
-          including hands-on projects, quizzes, and personalized feedback from
-          instructors.
+          Unlock the flexibility to learn coding on your terms, wherever you
+          are. Access a comprehensive suite of resources, including real-world
+          projects, interactive assessments, and expert-led personalized
+          feedback.
         </div>
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 mt-6 sm:mt-8">
           <CTAButton active={true} linkto={"/signup"}>
-            Learn More
+            Explore More
           </CTAButton>
           <CTAButton active={false} linkto={"/login"}>
-            Book a Demo
+            Join Us
           </CTAButton>
         </div>
 
@@ -84,7 +85,7 @@ const Home = () => {
               active: false,
             }}
             codeblock={`<!DOCTYPE html>\n <html lang="en">\n<head>\n<title>This is myPage</title>\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav> <a href="/one">One</a> <a href="/two">Two</a> <a href="/three">Three</a>\n</nav>\n</body>`}
-            codeColor={"text-yellow-25"}
+            codeColor={"text-caribbeangreen-25"}
             backgroundGradient={<div className="codeblock1 absolute"></div>}
           />
         </div>
@@ -113,7 +114,7 @@ const Home = () => {
               active: false,
             }}
             codeblock={`<!DOCTYPE html>\n <html lang="en">\n<head>\n<title>This is myPage</title>\n</head>\n<body>\n<h1><a href="/">Header</a></h1>\n<nav> <a href="/one">One</a> <a href="/two">Two</a> <a href="/three">Three</a>\n</nav>\n</body>`}
-            codeColor={"text-yellow-25"}
+            codeColor={"text-caribbeangreen-25"}
           />
         </div>
 

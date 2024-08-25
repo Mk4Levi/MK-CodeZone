@@ -75,7 +75,7 @@ function LoginForm() {
         </label>
         <button
           type="submit"
-          className="mt-6 rounded-md bg-yellow-50 py-2 px-4 font-medium text-richblack-900"
+          className="mt-6 rounded-md bg-caribbeangreen-50 py-2 px-4 font-medium text-richblack-900"
         >
           Log In
         </button>
