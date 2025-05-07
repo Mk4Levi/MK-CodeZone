@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="flex gap-3 text-lg">
                 <Link
-                  to={"https://www.youtube.com/"}
+                  to={"https://github.com/Mk4Levi"}
                   target="blank"
                   title="Github"
                 >
@@ -222,7 +222,7 @@ const Footer = () => {
             <strong className="purple">
               {
                 <Link
-                  to="https://manthan-mk-portfolio.vercel.app/"
+                  to="https://manthan.cloud"
                   className="footer-link"
                   target="_blank"
                 >
