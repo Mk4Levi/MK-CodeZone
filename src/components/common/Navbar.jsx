@@ -170,7 +170,7 @@ const Navbar = () => {
               rounded
             />
           ) : (
-            <Link to="https://manthan-mk-portfolio.vercel.app" target="blank">
+            <Link to="https://manthan.cloud" target="blank">
               <img
                 className="mt-1 appLogo"
                 src={mkLogo}
